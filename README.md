@@ -17,7 +17,7 @@ The script will Ensure you have the following installed on your system:
 ### Step 1: Clone the Repository
 
 ```
-git clone https://github.com/yourusername/convert-script.git
+git clone https://github.com/WROG208/convert-script.git
 
 cd convert-script
 ```
