@@ -18,17 +18,44 @@ I've included information below on gTTS.
 
 ## Installation
 
-### Step 1: Clone the Repository
+### Step 1: Download the Repository
 
 ```sh
-git clone https://github.com/WROG208/convert-script.git
-cd convert-script
+Click on the green <>CODE button and download the zip file
+Unzip the files on your computer.
+You should have 4 files:
+convert.py
+install.sh
+License.txt
+README.md
+```
+### Step 2: Copy the install.sh and convert.py to your Pi
 
-```
-### Step 2: Run the Install Script
-```
+- Using Winscp open the Raspberry Pi you will be working with and drag and drop from your computer into the WinSCP window, the side of the Pi. You should have a copy of the files convert.py and install.sh on the folder you had open in your Pi. In my case, they are in the ROOT folder.
+
+![winscp](https://github.com/WROG208/Convert.Script/assets/147953407/6384df11-0cc0-4001-bd84-3ea5e27c8360)
+
+- Right-click on install.sh and choose properties.
+- You should see a box open up like this
+
+   ![properties](https://github.com/WROG208/Convert.Script/assets/147953407/8b604d67-a480-4449-9d86-c1c0ba916157)
+
+Where it says Permissions: Click the box with the X on the line that says Owner, no need to check the other 2 X boxes like in the picture.
+Click OK and you are done with this file.
+
+Now Using Putty sign in to the same Pi you just moved those files to.<br>
+When the Admin Menu comes up choose option 9 Start Bash shell interface
+
+![admin window](https://github.com/WROG208/Convert.Script/assets/147953407/4acc4ebc-9ebb-4a70-98ba-3a89edb0fa5a)
+
+You should be seeing this now.
+
+![bash](https://github.com/WROG208/Convert.Script/assets/147953407/46344486-e8db-4f5a-b515-5ca5934c36f2)
+
+No matter what it looks like type cd and enter.
+
 sudo ./install.sh
-```
+
 The install script will copy the convert.py script to /usr/local/sbin/ and make it executable
 
 
