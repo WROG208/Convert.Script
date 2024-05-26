@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# 5/26/2024 By WROG208 \ N4ASS
+# www.lonewolfsystem.org
 
 if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root"
