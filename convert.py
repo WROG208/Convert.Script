@@ -40,30 +40,30 @@ def convert_text_to_speech():
 
     lang = 'en' if lang_choice == 'e' else 'es'
     
-    # Define the output folder for UL files
+
     output_folder_ul = "/var/lib/asterisk/sounds"
 
-    # Ensure the output folder exists
+
     os.makedirs(output_folder_ul, exist_ok=True)
 
-    # Construct the output file path
+
     output_filename_ul = os.path.join(output_folder_ul, "{}.ul".format(output_filename_base))
 
-    # Create a temporary WAV file
+
     with NamedTemporaryFile(suffix=".wav", delete=False) as temp_wav:
         temp_wav_filename = temp_wav.name
 
     try:
-        # Save the converted speech to a WAV file
+
         from gtts import gTTS
         tts = gTTS(text=text_to_convert, lang=lang)
         tts.save(temp_wav_filename)
 
-        # Convert the WAV file to G.711 µ-law format using FFmpeg
+
         command = ['ffmpeg', '-i', temp_wav_filename, '-ar', '8000', '-ac', '1', '-f', 'mulaw', output_filename_ul]
         subprocess.run(command, check=True)
 
-        # If conversion is successful, delete the temporary WAV file
+
         os.remove(temp_wav_filename)
         print("The speech has been saved as {} and the temporary WAV file has been deleted.".format(output_filename_ul))
     except subprocess.CalledProcessError as e:
