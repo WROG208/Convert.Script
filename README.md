@@ -21,13 +21,10 @@ I've included information below on gTTS.
 ### Step 1: Download the Repository
 
 ```sh
-Click on the green <>CODE button and download the zip file
-Unzip the files on your computer.
-You should have 4 files:
-convert.py
-install.sh
-License.txt
-README.md
+git clone https://github.com/WROG208/Convert.Script.git
+cd Convert.Script
+chmod +x install.sh
+sudo ./install.sh
 ```
 ### Step 2: Copy the install.sh and convert.py to your Pi
 
