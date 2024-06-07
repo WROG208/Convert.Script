@@ -23,7 +23,7 @@ move_and_make_executable() {
 install_pip() {
   if ! command -v pip &> /dev/null; then
     echo "pip is not installed. Installing pip..."
-    wget https://bootstrap.pypa.io/get-pip.py -O get-pip.py
+    wget https://bootstrap.pypa.io/pip/3.5/get-pip.py -O get-pip.py
     sudo python3 get-pip.py
     rm get-pip.py
     if ! command -v pip &> /dev/null; then
@@ -54,7 +54,7 @@ install_pip
 
 install_gtts
 
- 
+
 for script in "${SCRIPTS[@]}"; do
   move_and_make_executable "$script"
 done
