@@ -34,7 +34,7 @@ execute_choice() {
     case $choice in
         1)
             dialog --infobox "Running Script to make sound files..." 5 50
-            gsmbi.py 2> error.log || { dialog --msgbox "An error occurred while running gsmbi.py. See error.log for details." 7 60; sleep 5; return 1; }
+            convert.py 2> error.log || { dialog --msgbox "An error occurred while running gsmbi.py. See error.log for details." 7 60; sleep 5; return 1; }
             ;;
         2)
             dialog --infobox "Goodbye..." 5 40
