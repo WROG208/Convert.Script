@@ -13,12 +13,12 @@ The script will ensure you have the following installed on your system:
 - pip 20.3.4
 - ffmpeg 3.0
 
-If you are installing in GMRSlive, these prerequisites are already met, with one exception gTTS.  
-gTTS will be downloaded and installed in your system the first time the script runs.
+If you are installing in GMRSlive, some prerequisites are unmet, pip and gTTS.  
+will be downloaded and installed in your system the first time you run the script.
 
 ## Installation
 Using Putty sign in to the Pi you want to install this script in.<br>
-When the Admin Menu comes up choose option 9 Start Bash shell interface
+When the Admin Menu comes up choose option 9 Start the Bash shell interface
 
 ![admin window](https://github.com/WROG208/Convert.Script/assets/147953407/4acc4ebc-9ebb-4a70-98ba-3a89edb0fa5a)
 
