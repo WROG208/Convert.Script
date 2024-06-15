@@ -3,10 +3,11 @@
 # 5/26/2024 By WROG208 \ N4ASS
 # www.lonewolfsystem.org
 
+REPO_URL="https://github.com/WROG208/convert-script.git"
+REPO_DIR="convert-script"
+
 SCRIPTS=("menu.sh" "gsmbi.py" "cronJ.sh")
 DESTINATION="/usr/local/sbin"
-
-REPO_DIR=$(basename $(pwd))
 
 move_and_make_executable() {
   local script=$1
@@ -16,7 +17,6 @@ move_and_make_executable() {
   fi
 
   sudo mv "$script" "$DESTINATION"
-
   sudo chmod +x "$DESTINATION/$script"
 }
 
@@ -48,18 +48,34 @@ install_gtts() {
   fi
 }
 
+update_repo() {
+  if [ -d "$REPO_DIR" ]; then
+    echo "Updating existing repository..."
+    cd "$REPO_DIR"
+    git pull
+    cd ..
+  else
+    echo "Cloning repository..."
+    git clone "$REPO_URL"
+  fi
+}
 
+# Run the update_repo function
+update_repo
+
+# Change to the repository directory
+cd "$REPO_DIR"
+
+# Install pip and gtts
 install_pip
-
-
 install_gtts
 
-
+# Move and make executable the scripts
 for script in "${SCRIPTS[@]}"; do
   move_and_make_executable "$script"
 done
 
-
+# Verify installation
 for script in "${SCRIPTS[@]}"; do
   if [ -f "$DESTINATION/$script" ] && [ -x "$DESTINATION/$script" ]; then
     echo "$script has been installed to $DESTINATION and made executable."
