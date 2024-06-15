@@ -6,7 +6,7 @@
 REPO_URL="https://github.com/WROG208/convert-script.git"
 REPO_DIR="convert-script"
 
-SCRIPTS=("menu.sh" "gsmbi.py" "cronJ.sh")
+SCRIPTS=("menu.sh" "convert.py" "cronJ.sh")
 DESTINATION="/usr/local/sbin"
 
 move_and_make_executable() {
