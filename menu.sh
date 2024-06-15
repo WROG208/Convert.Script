@@ -6,7 +6,7 @@
 show_menu() {
     dialog --clear --backtitle "" \
        --title "WROG208 / N4ASS" \
-       --menu "Extras Menu Choose an option:" \
+       --menu "Only have one option:" \
        20 60 10 \
        1 "Script to Make sound files from Text" \
        2 "Exit" \
