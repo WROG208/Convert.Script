@@ -1,6 +1,6 @@
 # Convert Script
 
-Created By WROG208---N4ASS  
+By WROG208---N4ASS  
 [www.lonewolfsystem.org](http://www.lonewolfsystem.org)
 
 A script to convert text to speech using gTTS and save the output in G.711 µ-law format for Asterisk/Allstar systems.
